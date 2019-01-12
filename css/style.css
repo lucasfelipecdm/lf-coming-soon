@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@media  screen and (min-width: 768px) {
+	#day, #hours, #min, #sec {
+		font-size: 50px;
+		font-weight: bold;			
+		display: block;
+		margin: 0;
+	}	
+}
+
+@media  screen and (max-width: 767px) {
+	#day, #hours, #min, #sec {
+		font-size: 20px;
+		font-weight: bold;		
+		display: inline;
+		margin: 0;
+	}	
+}
+
+@media  screen and (min-width: 768px) {
+	.div_day, .div_hours, .div_min, .div_sec {
+		padding-right: 65px;
+ 		padding-left: 55px;
+ 		font-size: 25px;
+ 		font-weight: bold;
+ 		display: inline-block;
+ 	}
+}
+	
+@media  screen and (max-width: 767px) {
+	.div_day, .div_hours, .div_min, .div_sec {
+		padding-right: 5px;
+	 	padding-left: 5px;
+	 	font-size: 15px;
+	 	font-weight: bold;
+	 	display: inline-block;
+	}	
+}
+
+@media  screen and (min-width: 768px) {
+	main {
+		height:  50vh;
+		padding-top: 1em;	
+	}
+}
+	
+@media  screen and (max-width: 767px) {
+	main {
+		height:  40vh;
+		padding-top: 1em;
+	}	
+}
+
+@media  screen and (min-width: 768px) {
+	.titles {
+		font-size: 15px;
+		padding-top: 100px;
+	}
+}
+	
+@media  screen and (max-width: 767px) {
+	.titles {
+		font-size: 15px;
+		padding-top: 50px;	
+	}	
+}
+
+*, *before, *after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: rgb(107, 42, 153) url(../img/background.jpg);
+	width: 100%;
+	text-align: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;	
+	font-family: 'Roboto', sans-serif;	
+	color: white;
+}
+
+header, footer, main {
+	max-width:  100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+img {
+	width: 100px;
+	margin: 2em;	
+}
+
+li {
+	display: inline-block;
+	align-content: center;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+h1 {
+	margin: 0;
+}
+
+.time-div {
+	text-transform: uppercase;
+}
+
+footer {
+	height: 100px;
+	margin: 0;
+}
+
+header {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.social-medias {
+	height: 20px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	padding-top: 15px;
+	padding-left: 0;
+	position: bottom;
+}
+
+.fa-linkedIn {
+	padding-right: 15px;
+}
+
+ul {
+	padding-left: 3px;
+	align-content: center;
+}
+
+hr {
+	width: 100%;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+small {
+	font-size: 10px;
+}
+
+.footer {
+	height: 50px;
+	padding-top: 50px;
+}
+
+p {
+	font-size: 25px;
+}
+
+.span-light-off {
+    display: inline-block;
+    transition: 2s;
+    text-shadow: none;
+    filter: brightness(0.25);
+}
+
+.span-light-on {
+    filter: brightness(1.25);
+    transition: 2s;
+    text-shadow: 
+        0 0 10px rgb(255,255,255),
+        0 0 20px rgb(255,255,255),
+        0 0 30px rgb(255,255,255),
+        0 0 40px rgb(255,255,255),
+        0 0 70px rgb(255,255,255),
+        0 0 80px rgb(255,255,255),
+        0 0 100px rgb(255,255,255), 
+        0 0 150px rgb(255,255,255);
+}
+
+.span-light-on-clicked {
+    filter: brightness(1.00);
+    transition: 2s;
+    text-shadow: 
+        0 0 10px rgb(255,255,255),
+        0 0 20px rgb(255,255,255),
+        0 0 30px rgb(255,255,255),
+        0 0 40px rgb(255,255,255),
+        0 0 70px rgb(255,255,255),
+        0 0 80px rgb(255,255,255),
+        0 0 100px rgb(255,255,255), 
+        0 0 150px rgb(255,255,255);
+}
+
+#light {	
+	text-transform: uppercase;
+    display: inline-block;
+    animation: lightBlink 2s ease-in infinite;
+    font-size: 25px;
+    text-shadow: 
+        0 0 10px rgb(255,255,255),
+        0 0 20px rgb(255,255,255),
+        0 0 30px rgb(255,255,255),
+        0 0 40px rgb(255,255,255),
+        0 0 70px rgb(255,255,255),
+        0 0 80px rgb(255,255,255),
+        0 0 100px rgb(255,255,255), 
+        0 0 150px rgb(255,255,255);
+}
+
+.mouseround {
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    width: 5px;
+    height: 5px;
+    pointer-events: none;
+    box-shadow:
+        0 0 30px 10px #fff,
+        0 0 60px 15px #fff, 
+        0 0 80px 20px #fff; 
+}
+
+@keyframes lightBlink {
+    0% {
+        filter: brightness(0.8);
+    }
+    
+    50% {
+        filter: brightness(1.25);
+    }
+
+    100% {
+        filter: brightness(0.8);
+    }
+}
