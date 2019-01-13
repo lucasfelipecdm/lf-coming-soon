@@ -75,6 +75,7 @@
 }
 
 body {
+	overflow: hidden;
 	background: rgb(107, 42, 153) url(../img/background.jpg);
 	width: 100%;
 	text-align: center;
@@ -93,6 +94,7 @@ header, footer, main {
 }
 
 img {
+	transition: 1s;
 	width: 100px;
 	margin: 2em;	
 }
@@ -123,12 +125,11 @@ header {
 }
 
 .social-medias {
-	height: 20px;
+	font-size: 1.5em;
+	height: 40px;
 	margin-top: 1px;
 	margin-bottom: 1px;
-	padding-top: 15px;
 	padding-left: 0;
-	position: bottom;
 }
 
 .fa-linkedIn {
@@ -157,6 +158,11 @@ small {
 
 p {
 	font-size: 25px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
 }
 
 .span-light-off {
@@ -194,11 +200,11 @@ p {
         0 0 150px rgb(255,255,255);
 }
 
-#light {	
+.light-on {
+	display: inline-block;	
 	text-transform: uppercase;
-    display: inline-block;
-    animation: lightBlink 2s ease-in infinite;
-    font-size: 25px;
+    animation: lightBlink 2s ease-in infinite;	
+	transition: 2s;
     text-shadow: 
         0 0 10px rgb(255,255,255),
         0 0 20px rgb(255,255,255),
@@ -208,6 +214,15 @@ p {
         0 0 80px rgb(255,255,255),
         0 0 100px rgb(255,255,255), 
         0 0 150px rgb(255,255,255);
+}
+
+.light-off {
+	display: inline-block;	
+	text-transform: uppercase;
+	/*animation: lightTransitionOff 1s cubic-bezier(.6,-0.28,.79,-0.04);*/
+	text-shadow: none;
+	transition: 2s;
+	filter: brightness(0.25);
 }
 
 .mouseround {
@@ -234,5 +249,64 @@ p {
 
     100% {
         filter: brightness(0.8);
+    }
+}
+
+@keyframes lightTransitionIn {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes lightTransitionOff {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes imgLight {
+	0% {
+		transform: scale(1);
+	}
+
+	25% {
+		transform: scale(0);
+	}
+
+	75% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes imgBlink {
+	0% {
+		filter: brightness(0.6);
+		filter: drop-shadow(0 0 1px white);
+    }
+    
+    50% {
+		filter: brightness(1.25);
+		filter: drop-shadow(0 0 15px white);
+    }
+
+    100% {
+        filter: brightness(0.6);
+		filter: drop-shadow(0 0 1px white);
     }
 }
