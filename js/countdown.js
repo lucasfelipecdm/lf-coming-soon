@@ -7,7 +7,7 @@ function getTimeNow() {
 }
 
 function getDateGoals() {
-    dateGoals = new Date(2019, 6, 1);
+    dateGoals = new Date(2020, 1, 1);
 }
 
 function getDateDiff() {
